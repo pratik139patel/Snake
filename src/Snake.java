@@ -1,3 +1,6 @@
+package src;
+
+
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
@@ -44,7 +47,6 @@ public class Snake
     private static SnakeGamePane gaming_pane;
     private static JFrame game_frame;
 
-    public static void main(String[] Args) { new Snake(); }
 
     public Snake() 
     {
@@ -57,21 +59,21 @@ public class Snake
                 try { UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); }
                 catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) { ex.printStackTrace(); }
 
-                game_frame = new JFrame("Snake"); game_frame.setIconImage(new ImageIcon("Pratik Patel.jpg").getImage());
+                game_frame = new JFrame("Snake"); game_frame.setIconImage(new ImageIcon("pratik-patel.jpeg").getImage());
                 JMenuBar game_menu_bar = new JMenuBar();
                 JMenu game_options = new JMenu("Game");
                 JMenu game_settings = new JMenu("Settings");
                 gaming_pane = new SnakeGamePane();
 
-                JMenuItem exit_game = new JMenuItem("Exit"); exit_game.setAccelerator(KeyStroke.getKeyStroke('0', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx())); 
-                start_game = new JMenuItem("Start"); start_game.setAccelerator(KeyStroke.getKeyStroke('1', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx())); 
-                stop_game = new JMenuItem("Stop"); stop_game.setAccelerator(KeyStroke.getKeyStroke('2', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
-                restart_game = new JMenuItem("Restart"); restart_game.setAccelerator(KeyStroke.getKeyStroke('3', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
+                JMenuItem exit_game = new JMenuItem("Exit"); exit_game.setAccelerator(KeyStroke.getKeyStroke('0', Toolkit.getDefaultToolkit().getMenuShortcutKeyMask())); 
+                start_game = new JMenuItem("Start"); start_game.setAccelerator(KeyStroke.getKeyStroke('1', Toolkit.getDefaultToolkit().getMenuShortcutKeyMask())); 
+                stop_game = new JMenuItem("Stop"); stop_game.setAccelerator(KeyStroke.getKeyStroke('2', Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));
+                restart_game = new JMenuItem("Restart"); restart_game.setAccelerator(KeyStroke.getKeyStroke('3', Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));
 
-                JMenuItem color_sett = new JMenuItem("Color"); game_settings.add(color_sett); color_sett.setAccelerator(KeyStroke.getKeyStroke('C', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
-                JMenuItem game_sett = new JMenuItem("Game Play"); game_settings.add(game_sett); game_sett.setAccelerator(KeyStroke.getKeyStroke('G', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
-                JMenuItem reset_sett = new JMenuItem("Reset All"); game_settings.add(reset_sett); reset_sett.setAccelerator(KeyStroke.getKeyStroke('R', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
-                JMenuItem relauch_sett = new JMenuItem("Re-Launch"); game_settings.add(relauch_sett); relauch_sett.setAccelerator(KeyStroke.getKeyStroke('L', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
+                JMenuItem color_sett = new JMenuItem("Color"); game_settings.add(color_sett); color_sett.setAccelerator(KeyStroke.getKeyStroke('C', Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));
+                JMenuItem game_sett = new JMenuItem("Game Play"); game_settings.add(game_sett); game_sett.setAccelerator(KeyStroke.getKeyStroke('G', Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));
+                JMenuItem reset_sett = new JMenuItem("Reset All"); game_settings.add(reset_sett); reset_sett.setAccelerator(KeyStroke.getKeyStroke('R', Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));
+                JMenuItem relauch_sett = new JMenuItem("Re-Launch"); game_settings.add(relauch_sett); relauch_sett.setAccelerator(KeyStroke.getKeyStroke('L', Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));
                 JMenuItem credit_sett = new JMenuItem("Credits"); game_settings.add(credit_sett);
 
                 game_options.add(start_game); game_options.add(stop_game); game_options.add(restart_game); game_options.add(exit_game);
@@ -365,7 +367,7 @@ public class Snake
     private boolean smooth_motion;
     private boolean edge_correction;
 
-    private final String File_name = "snake_settings.txt";
+    private final String File_name = "settings.txt";
 
     private final int min_time_delay = 0;
     private final int max_time_delay = 1000;
