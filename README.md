@@ -6,5 +6,5 @@
 
 ## Snake Game Image: 
 <p align="center">
-    <img src="https://github.com/pratik139patel/Personal-Projects/blob/master/Snake/img/snake-game-screenshot.jpeg">
+    <img src="https://github.com/pratik139patel/Snake/blob/master/img/snake-game-screenshot.jpeg">
 </p>
