@@ -836,3 +836,68 @@ public class Snake
         }
     }
 }
+
+
+/*
+if (game_on) { g2d.setColor(SnakeColor); } 
+else { g2d.setColor(SnakeCollisionColor); stop_game.setEnabled(false); }
+
+if(custom_snake_shape)
+{
+    if(game_on)
+    {
+        if(smooth_motion)
+        {
+            if(current_move_direction == 0)  //0:Right, 1:Down, 2:Left, 3:Up
+            {
+                XPts[0] = x; XPts[1] = x+obj_height_width; XPts[2] = x;
+                YPts[0] = y; YPts[1] = y+(int)(obj_height_width/2); YPts[2] = y+obj_height_width;
+            }
+            else if(current_move_direction == 1)
+            {
+                XPts[0] = x; XPts[1] = x+obj_height_width; XPts[2] = x+(int)(obj_height_width/2);
+                YPts[0] = y; YPts[1] = y; YPts[2] = y+obj_height_width;
+            }
+            else if(current_move_direction == 2)
+            {
+                XPts[0] = x+obj_height_width; XPts[1] = XPts[0]; XPts[2] = x;
+                YPts[0] = y; YPts[1] = y+obj_height_width; YPts[2] = y+(int)(obj_height_width/2);
+            }
+            else
+            {
+                XPts[0] = x; XPts[1] = x+obj_height_width; XPts[2] = x+(int)(obj_height_width/2);
+                YPts[0] = y+obj_height_width; YPts[1] = YPts[0]; YPts[2] = y;
+            }
+        }
+        else
+        {
+            if(move_direction == 0)  //0:Right, 1:Down, 2:Left, 3:Up
+            {
+                XPts[0] = x; XPts[1] = x+obj_height_width; XPts[2] = x;
+                YPts[0] = y; YPts[1] = y+(int)(obj_height_width/2); YPts[2] = y+obj_height_width;
+            }
+            else if(move_direction == 1)
+            {
+                XPts[0] = x; XPts[1] = x+obj_height_width; XPts[2] = x+(int)(obj_height_width/2);
+                YPts[0] = y; YPts[1] = y; YPts[2] = y+obj_height_width;
+            }
+            else if(move_direction == 2)
+            {
+                XPts[0] = x+obj_height_width; XPts[1] = XPts[0]; XPts[2] = x;
+                YPts[0] = y; YPts[1] = y+obj_height_width; YPts[2] = y+(int)(obj_height_width/2);
+            }
+            else
+            {
+                XPts[0] = x; XPts[1] = x+obj_height_width; XPts[2] = x+(int)(obj_height_width/2);
+                YPts[0] = y+obj_height_width; YPts[1] = YPts[0]; YPts[2] = y;
+            }
+        }
+    }
+
+    g2d.fillPolygon(XPts, YPts, 3);
+    for(int i = 1; i < snake_path.getSize(); ++i) { g2d.fillRect(snake_location[i].width, snake_location[i].height, obj_height_width, obj_height_width); }
+}
+else { for (Dimension D : snake_location) { g2d.fillRect(D.width, D.height, obj_height_width, obj_height_width); } }
+
+if(!game_on) {g.setColor(GameOverTextColor); g.setFont(new Font(Font.DIALOG, Font.BOLD, 18)); g.drawString("GAME OVER", getPreferredSize().width/2 - 45, getPreferredSize().height/2 - 10);}
+*/
